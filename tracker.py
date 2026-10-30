@@ -90,7 +90,7 @@ class HistoryRecord(TypedDict):
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Track configurable round-trip fares.")
     parser.add_argument("--config", type=Path, default=SCRIPT_DIR / "config.json")
-    parser.add_argument("--demo", action="store_true", help="Print synthetic results offline; no notifications or history writes.")
+    parser.add_argument("--demo", action="store_true", help="Preview example fares offline without notifications or history writes.")
     parser.add_argument(
         "--dry-run",
         action="store_true",
@@ -436,7 +436,7 @@ def main() -> int:
             sample = {"date": date.today().isoformat(), "flights": [
                 {"key": "Example Air 10:00a", "airline": "Example Air", "dep": "10:00a", "arr": "1:00p", "price": 250}
             ], "cheapest": 250, "cheapest_united": None}
-            print("SYNTHETIC DEMO — no live fares")
+            print("Example fares")
             print(build_message(sample, None, ["Example Air 2:00p → 10:00p"]))
             return 0
         round_trip_options = retry("round-trip fetch", fetch_round_trip_options)

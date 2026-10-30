@@ -47,7 +47,7 @@ def test_demo_does_not_fetch_send_or_write(tmp_path, monkeypatch, capsys):
     for name in ("fetch_round_trip_options", "fetch_return_options", "send_telegram", "write_history"):
         monkeypatch.setattr(tracker, name, forbidden)
     assert tracker.main() == 0
-    assert "SYNTHETIC DEMO" in capsys.readouterr().out
+    assert "Example fares" in capsys.readouterr().out
 
 
 def test_error_messages_do_not_expose_telegram_credentials(monkeypatch):
