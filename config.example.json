@@ -1,0 +1,12 @@
+{
+  "from_airport": "JFK",
+  "to_airport": "LAX",
+  "outbound_date": "2030-06-10",
+  "return_date": "2030-06-15",
+  "adults": 1,
+  "seat": "economy",
+  "currency": "USD",
+  "preferred_airline": "United",
+  "outbound_arrive_before": "23:59",
+  "return_land_before": "23:59"
+}
