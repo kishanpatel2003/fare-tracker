@@ -18,7 +18,7 @@ Python 3.11+ dependencies are declared inline and installed by uv. `--dry-run` r
 To preview the output with example prices:
 
 ```sh
-uv run tracker.py --config config.example.json --demo
+uv run tracker.py --config config.example.json --example
 ```
 
 This mode uses example prices without retrieving fares, sending messages, or changing history.

@@ -90,7 +90,7 @@ class HistoryRecord(TypedDict):
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Track configurable round-trip fares.")
     parser.add_argument("--config", type=Path, default=SCRIPT_DIR / "config.json")
-    parser.add_argument("--demo", action="store_true", help="Preview example fares offline without notifications or history writes.")
+    parser.add_argument("--example", "--demo", dest="demo", action="store_true", help="Preview example fares offline without notifications or history writes.")
     parser.add_argument(
         "--dry-run",
         action="store_true",
